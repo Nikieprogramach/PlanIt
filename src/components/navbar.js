@@ -51,8 +51,10 @@ function NavBar()
                             Sign Up
                         </Link>
                     </li>
+                    <li className='nav-item'>
+                        {button && <Button buttonStyle='btn--outline'>Sign Up</Button>}
+                    </li>
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>Sign Up</Button>}
             </div>
         </nav> 
     )

@@ -1,6 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/navbar';
+import Home from './components/pages/Home'
+import Events from './components/pages/Events';
+import Photos from './components/pages/Photos';
+import SignUp from './components/pages/SignUp';
 
 function App() {
   return (
@@ -8,7 +12,10 @@ function App() {
     <Router>
       <NavBar/>
       <Switch>
-        <Route path='/' exact/>
+        <Route path='/' exact component={Home}/>
+        <Route path='/events' exact component={Events} />
+        <Route path='/photos' exact component={Photos} />
+        <Route path='/sign-up' exact component={SignUp} />
       </Switch>
     </Router>
     </>

@@ -1,8 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
 import '../../App.css'
 import './SignUp.css'
 
 export default function SignUp(){
+
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+  
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+  
+      try {
+        const response = await fetch('/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username, email, password }),
+        });
+  
+        if (response.ok) {
+          console.log('Form submitted successfully!');
+          console.log(response);
+        } else {
+          console.error('Form submission failed.');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+      }
+    };  
+
     return(
         // <div className="sign-up-container">
         //     <h1 className="sign-up">Sign Up</h1>
@@ -15,20 +43,20 @@ export default function SignUp(){
         <div className="sign-up-page">
             <div class="sign-up-container">
                 <h2>Sign Up</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" placeholder="Enter your name" required/>
+                    <input type="text" id="name" placeholder="Enter your name" value={username} onChange={(event) => setUsername(event.target.value)} required/>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" placeholder="Enter your email" required/>
+                    <input type="email" id="email" placeholder="Enter your email" value={email} onChange={(event) => setEmail(event.target.value)} required/>
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" placeholder="Enter your password" required/>
+                    <input type="password" id="password" placeholder="Enter your password" value={password} onChange={(event) => setPassword(event.target.value)} required/>
                 </div>
-                <input type="submit" value="Sign Up"/>
+                <button type="submit">Submit</button>
                 </form>
             </div>
         </div>

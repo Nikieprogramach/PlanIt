@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import '../../App.css'
 import './SignUp.css'
+import { Link } from "react-router-dom";
 
 export default function SignUp(){
 
@@ -60,6 +61,8 @@ export default function SignUp(){
                 </div>
                 <button type="submit">Submit</button>
                 </form>
+                <p>Already have an account? </p>
+                <Link to="/login">Log In</Link>
             </div>
         </div>
     )   

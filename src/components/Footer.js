@@ -6,17 +6,6 @@ import { Link } from "react-router-dom";
 function Footer(){
     return(
         <div className="footer-container">
-            <section className="footer-subscription">
-                <p className="footer-subscription-heading">
-                    Join the PlanIt comunity to recieve invitations for more events.
-                </p>
-                <div className="input-areas">
-                    <form>
-                        <input type="email" id="email" placeholder="Enter your email" required className="footer-input"/>
-                        <input  type="submit" value = "Subscribe"></input>
-                    </form>
-                </div>
-            </section>
             <div className="footer-links">
                 <div className="footer-link-wrapper">
                     <h2>About Us</h2>

@@ -1,27 +1,29 @@
 import React from "react";
-import CardItem from "./CardItem";
+import Card from "./CardItem";
 import './Cards.css'
 
 function Cards(){
     return(
         <div className="cards">
-            <h1>Check interesting stuff</h1>
-            <div className="cards__container">
-                <div className="cards__wrapper">
-                    <ul className="cards__items">
-                        <CardItem 
-                        src="images/Fire_Lizard.jpg"
-                        text = "See the fire lizard!"
-                        label = 'Adventure'
-                        path = '/events'
-                        />
-                        <CardItem 
-                        src="images/synthwave-purple-city-ec-1920x1080.jpg"
-                        text = "See the beautifull views!"
-                        label = 'Explore'
-                        path = '/events'
-                        />
-                    </ul>
+            <h1>Check out interesting stuff</h1>
+            <div className="cards_container">
+                <div className="cards_wrapper">
+                    <Card 
+                    photo="images/Fire_Lizard.jpg"
+                    description = "See the fire lizard! lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+                    name = 'Fire Lizard'
+                    date = '23ti Avgust'
+                    location = 'ul. Vasil Petleshkov 21'
+                    link = 'https://www.google.com/'
+                    />
+                    <Card 
+                    photo="images/synthwave-purple-city-ec-1920x1080.jpg"
+                    description = "See the fire lizard! lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+                    name = 'Fire Lizard'
+                    date = '23ti Avgust'
+                    location = 'ul. Vasil Petleshkov 21'
+                    link = 'https://www.google.com/'
+                    />
                 </div>
             </div>
         </div>
@@ -29,3 +31,4 @@ function Cards(){
 }
 
 export default Cards
+

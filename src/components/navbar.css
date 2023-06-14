@@ -71,6 +71,27 @@
     border-bottom: 4px solid #fff;
     transition: all 0.2s ease-out;
   }
+
+  .sign-out-btn{
+    background-color: transparent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-size: 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+  .sign-out-btn:hover{
+    background: #fff;
+    color: #242424;
+    transition: all 0.3s ease-out;
+  }
   
   .fa-bars {
     color: #fff;

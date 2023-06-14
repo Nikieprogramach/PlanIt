@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import '../../App.css'
 import './SignUp.css'
+import { Link } from "react-router-dom";
 
 export default function SignUp(){
 
@@ -10,9 +11,11 @@ export default function SignUp(){
   
     const handleSubmit = async (event) => {
       event.preventDefault();
-  
+      
+      console.log(username, email, password);
+
       try {
-        const response = await fetch('/submit', {
+        const response = await fetch('http://localhost:3001/sign-up', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -58,6 +61,8 @@ export default function SignUp(){
                 </div>
                 <button type="submit">Submit</button>
                 </form>
+                <p>Already have an account? </p>
+                <Link to="/login">Log In</Link>
             </div>
         </div>
     )   

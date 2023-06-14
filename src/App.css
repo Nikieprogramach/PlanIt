@@ -16,14 +16,14 @@
   font-size: 3rem;
 } 
 
- .events {
+ /* .events {
   background-image: url('../public/images/eventsBackground.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
-}
+} */
 
 .photos {
   background-image: url('../public/images/photosBackground.jpg');

@@ -32,17 +32,11 @@ export default function SignUp(){
       } catch (error) {
         console.error('Error submitting form:', error);
       }
+
+      window.location.href = '/login';
     };  
 
     return(
-        // <div className="sign-up-container">
-        //     <h1 className="sign-up">Sign Up</h1>
-        //     <form className="sign-up-form">
-        //         <input type="email" name="email" placeholder="Your Email" className="email-input"/>
-        //         <input type="password" name="password" placeholder="Your Password" className="password-input"/>
-        //         <button className="sign-up-button">Sign Up</button>
-        //     </form>
-        // </div>
         <div className="sign-up-page">
             <div class="sign-up-container">
                 <h2>Sign Up</h2>

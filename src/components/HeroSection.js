@@ -12,7 +12,7 @@ function HeroSection(){
                 <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' path='/sign-up'>
                     Get started
                 </Button>
-                <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large' path='/events'>
+                <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large' path='/create-event'>
                     Watch something <i className='far-fa-play-circle'/>
                 </Button>
             </div>

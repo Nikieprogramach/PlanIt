@@ -1,0 +1,17 @@
+.events{
+    height: 91.7vh;
+    width: 100vw;
+    background-image: url('../../../public/images/synthwave-purple-city-ec-1920x1080.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: center;
+}
+
+.event-list-container{
+    width: 100vw;
+    height: 50vh;
+    border-radius: 5px;
+    background-color: rgba(36, 36, 36, 0.9);
+    z-index: 2;
+}

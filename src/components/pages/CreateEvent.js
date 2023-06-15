@@ -6,29 +6,33 @@ function CreateEvent(){
     const [location, setLocation] = useState('');
     const [description, setDescription] = useState('');
     const [date, setDate] = useState('');
+    const [imageURL, setImageURL] = useState('');
 
     const createEvent = async (event) => {
         event.preventDefault();
-      
+
         console.log(name, location, description, date);
 
         const session_id = localStorage.getItem('sessionId');
+        console.log(session_id)
 
         try {
             const response = await fetch('http://localhost:3001/create-event', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ session_id, name, location, description, date }),
+              },
+            body: JSON.stringify({ session_id, name, location, description, date, imageURL }),
+        }).then(response => response.json())
+            .then(data => {
+            console.log(data.seccess);
+            if(data.seccess === 'ok'){
+                window.location.href = '/';
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
         });
-  
-        if (response.ok) {
-            console.log('Form submitted successfully!');
-            console.log(response);
-        } else {
-            console.error('Form submission failed.');
-        }
         } catch (error) {
             console.error('Error submitting form:', error);
         }
@@ -55,6 +59,10 @@ function CreateEvent(){
                         <div class="form-group">
                             <label for="date">Date:</label>
                             <input type="date" id="date" value={date} onChange={(event) => setDate(event.target.value)} required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Image URL:</label>
+                            <input type="url" id="image" value={imageURL} onChange={(event) => setImageURL(event.target.value)} required />
                         </div>
                         <button type="submit">Create event</button>
                         </form>

@@ -54,22 +54,28 @@
     border: 1px solid #ccc;
   }
 
-  input[type="submit"] {
+  .submit{
     background-color: transparent;
-    height: 7vh;
-    width: 9vw;
+    height: 5vh;
+    width: 7vw;
     font-size: 18px;
-    color: black;
-    background-color: transparent;
     color: #fff;
+    background-color: transparent;
     padding: 8px 20px;
     border: 1px solid var(--primary);
     transition: all 0.3s ease-out;
   }
 
-  input[type="submit"]:hover {
+  .submit:hover{
     cursor: pointer;
     background: #fff;
     color: #242424;
     transition: all 0.3s ease-out;  
+  }
+
+  .login{
+    margin-top: 10px;
+    float:right;
+    display: flex;
+    flex-direction: column;
   }

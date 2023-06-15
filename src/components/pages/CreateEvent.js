@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import './CreateEvent.css'
 
 function CreateEvent(){
 
@@ -72,7 +73,7 @@ function CreateEvent(){
                             <input type="url" id="image" value={imageURL} onChange={(event) => setImageURL(event.target.value)} required />
                         </div>
                         <div class="form-group">
-                            <label for="image">People Inavited:</label>
+                            <label for="image">People Invited:</label>
                             <input type="email" id="email" value={emails} onChange={(event) => setEmails(event.target.value)} multiple required />
                         </div>
                              <button type="submit" className="create-button">Create event</button>

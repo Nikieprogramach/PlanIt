@@ -75,7 +75,7 @@ function CreateEvent(){
                             <label for="image">People Inavited:</label>
                             <input type="email" id="email" value={emails} onChange={(event) => setEmails(event.target.value)} multiple required />
                         </div>
-                        <button type="submit">Create event</button>
+                             <button type="submit" className="create-button">Create event</button>
                         </form>
                 </div>
             </div>

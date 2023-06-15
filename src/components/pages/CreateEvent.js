@@ -4,7 +4,7 @@ function CreateEvent(){
 
     useEffect(() => {
         if(localStorage.getItem('sessionId') == null){
-            window.location.href = '/login';
+            // window.location.href = '/login';
         }
       }, []);
 

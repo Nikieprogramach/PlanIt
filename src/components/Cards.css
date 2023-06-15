@@ -48,7 +48,6 @@
 
 .event-box:hover {
   outline: none;
-  border: 1px solid black;
   padding: 0;
   border-radius: 10px;
 }
@@ -78,8 +77,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
-  width: 80vw;
-  height: 80vh;
+  width: 60vw;
+  height: 60vh;
   overflow: auto;
   border-radius: 10px;
 }
@@ -125,7 +124,7 @@
   font-size: 1.75vh;
   margin-left:1vw;
   margin-right:1vw;
-  margin: 20vh;
+  margin: 2vh;
   text-align: center;
 }
 

@@ -1,17 +1,24 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 function CreateEvent(){
+
+    useEffect(() => {
+        if(localStorage.getItem('sessionId') == null){
+            window.location.href = '/login';
+        }
+      }, []);
 
     const [name, setName] = useState('');
     const [location, setLocation] = useState('');
     const [description, setDescription] = useState('');
     const [date, setDate] = useState('');
     const [imageURL, setImageURL] = useState('');
+    const [emails, setEmails] = useState([])
 
     const createEvent = async (event) => {
         event.preventDefault();
 
-        console.log(name, location, description, date);
+        console.log(emails)
 
         const session_id = localStorage.getItem('sessionId');
         console.log(session_id)
@@ -22,7 +29,7 @@ function CreateEvent(){
             headers: {
                 'Content-Type': 'application/json',
               },
-            body: JSON.stringify({ session_id, name, location, description, date, imageURL }),
+            body: JSON.stringify({ session_id, name, location, description, date, imageURL, emails }),
         }).then(response => response.json())
             .then(data => {
             console.log(data.seccess);
@@ -63,6 +70,10 @@ function CreateEvent(){
                         <div class="form-group">
                             <label for="image">Image URL:</label>
                             <input type="url" id="image" value={imageURL} onChange={(event) => setImageURL(event.target.value)} required />
+                        </div>
+                        <div class="form-group">
+                            <label for="image">People Inavited:</label>
+                            <input type="email" id="email" value={emails} onChange={(event) => setEmails(event.target.value)} multiple required />
                         </div>
                         <button type="submit">Create event</button>
                         </form>

@@ -1,7 +1,7 @@
 import React from "react";
 import '../../App.css'
 import './Events.css'
-import '../Cards.css'    
+import Cards from "../Cards";
 
 export default function Events(){
     return(
@@ -9,7 +9,7 @@ export default function Events(){
             <div className="page">
                 <h1 className="events-title">Events</h1>
                 <div className="event-list-container">
-                    <h1>Events</h1>
+                    <Cards/>
                 </div>
             </div>
         </div>

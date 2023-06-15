@@ -37,7 +37,6 @@ function Cards(){
 
     return(
         <div className="cards">
-            <h1>Check out interesting stuff</h1>
             <div className="cards_container">
                 <div className="cards_wrapper">
                     {eventArray.map((item) => (

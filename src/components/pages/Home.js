@@ -9,6 +9,7 @@ function Home(){
     return(
         <>
             <HeroSection/>
+            <h2>Check out interesting events!</h2>
             <Cards/>
             <Footer/>
         </>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import '../../App.css'
 import './LogIn.css'
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 
 export default function LogIn(){
 

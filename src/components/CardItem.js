@@ -30,8 +30,8 @@ function Card(props) {
                                 <h2 className="event-name">{props.name}</h2>
                                 <p className="event-description">{props.description}</p>
                                 <div className="event-date-time">
-                                    <span className="label">When?</span> 
-                                    <span>{props.date}</span>
+                                    <div className="label">When?  </div> 
+                                    <div className='date'> {props.date}</div>
                                 </div>
                                 <div className="event-location">
                                     <span className="label">Where? <br></br></span> 

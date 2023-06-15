@@ -1,6 +1,7 @@
 import React from "react";
 import '../../App.css'
 import './Events.css'
+import '../Cards.css'    
 
 export default function Events(){
     return(

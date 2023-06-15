@@ -13,7 +13,7 @@ function HeroSection(){
                     Get started
                 </Button>
                 <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large' path='/create-event'>
-                    Watch something <i className='far-fa-play-circle'/>
+                    Create an event <i className='far-fa-play-circle'/>
                 </Button>
             </div>
         </div>

@@ -12,7 +12,7 @@
 
 .sign-up-page{
     display: flex;
-    height: 91.7vh;
+    height: 94vh;
     align-items: center;
     justify-content: center;
     background-image: url('../../../public/images/signUpBackground.png');

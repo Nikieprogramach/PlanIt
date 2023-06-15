@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import './CreateEvent.css'
+import '../Button.css'
 
 function CreateEvent(){
 
@@ -42,15 +44,11 @@ function CreateEvent(){
         <div className="create-event">
             <div className="page">
                 <h1 className="events-title">Create an event</h1>
-                <div className="event-list-container">
+                <div className="event-container">
                     <form onSubmit={createEvent}>
                         <div class="form-group">
                             <label for="name">Event name:</label>
                             <input type="name" id="name" placeholder="Enter event's name" value={name} onChange={(event) => setName(event.target.value)} required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="location">Location:</label>
-                            <input type="location" id="location" placeholder="Enter event's location" value={location} onChange={(event) => setLocation(event.target.value)} required/>
                         </div>
                         <div class="form-group">
                             <label for="description">Description:</label>
@@ -61,10 +59,16 @@ function CreateEvent(){
                             <input type="date" id="date" value={date} onChange={(event) => setDate(event.target.value)} required/>
                         </div>
                         <div class="form-group">
+                            <label for="location">Location:</label>
+                            <input type="location" id="location" placeholder="Enter event's location" value={location} onChange={(event) => setLocation(event.target.value)} required/>
+                        </div>
+                        <div class="form-group">
                             <label for="image">Image URL:</label>
                             <input type="url" id="image" value={imageURL} onChange={(event) => setImageURL(event.target.value)} required />
                         </div>
-                        <button type="submit">Create event</button>
+                        <div className="button">
+                            <button type="submit" className="create-button">Create event</button>
+                        </div>
                         </form>
                 </div>
             </div>

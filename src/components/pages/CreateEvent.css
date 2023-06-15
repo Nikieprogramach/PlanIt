@@ -1,0 +1,61 @@
+.create-event{
+    background-image: url('../../../public/images/CreateEvent.jpg');
+    display: flex;
+    height: 94vh;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page{
+    width: 30vw;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    border-radius: 2px;
+    color: #fff;
+    margin-top: 50px;
+}
+
+h1{
+    text-align: center;
+  }
+
+input[type="name"],
+input[type="description"],
+input[type="date"],
+input[type="location"],
+input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.create-button{
+    background-color: transparent;
+    height: 5vh;
+    width: 8vw;
+    font-size: 18px;
+    color: #fff;
+    background-color: transparent;
+    padding: 8px 20px;
+
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+}
+
+.create-button:hover{
+    cursor: pointer;
+    background: #fff;
+    color: #242424;
+    transition: all 0.3s ease-out;  
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

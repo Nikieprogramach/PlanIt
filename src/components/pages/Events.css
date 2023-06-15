@@ -1,7 +1,7 @@
 .events{
     height: 91.7vh;
-    width: 100vw;
-    background-image: url('../../../public/images/synthwave-purple-city-ec-1920x1080.jpg');
+    width: 98.9vw;
+    background-image: url('../../../public/images/eventsBackground1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -35,4 +35,13 @@
     float: right;
     /* padding-right: 10px;
     padding-bottom: 10px; */
+}
+
+.no-logged-in-text{
+    color: #fff;
+    font-size: 4vh;
+}
+
+.events-title{
+    color: #fff;
 }

@@ -29,7 +29,7 @@ export default function LogIn(){
           const sessionId = localStorage.getItem('sessionId');
           console.log("session id from browser", sessionId)
 
-          window.location.href = '/';
+          window.location.href = '/home';
           // Do something with the received JSON data
         })
         .catch(error => {
@@ -59,7 +59,7 @@ export default function LogIn(){
                     <label for="password">Password:</label>
                     <input type="password" id="password" placeholder="Enter your password" value={password} onChange={(event) => setPassword(event.target.value)} required/>
                 </div>
-                <button className="submit" type="submit">Submit</button>
+                <button className="submit" type="submit">Log In</button>
                 <div className="signup">
                   <p>Don't have an account? </p>
                   <Link to="/sign-up" className="signup-button">Sign Up</Link>

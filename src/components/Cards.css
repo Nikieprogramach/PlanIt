@@ -19,7 +19,7 @@
 .event-box {
   
   width: 17vw;
-  height: 20vh;
+  height: 13vw;
   background-size: cover;
   background-position: center;
   margin: 1vh 1vw;
@@ -108,10 +108,11 @@
   justify-content: center;
   font-size: 5vh;
   background: transparent;
+  top: 0;
 }
 
 .event-box.expanded .event-details .event-date-time {
-  margin-bottom: 5vh;
+  margin-bottom: 4%;
   font-size: 3vh;
   display: flex;
   flex-direction: column;
@@ -121,29 +122,29 @@
 
 .event-box.expanded .event-details .event-description {
   width: 100%;
-  font-size: 1.75vh;
+  font-size: 2.5vh;
   margin-left:1vw;
   margin-right:1vw;
-  margin: 10vh;
+  margin: 5vh;
   text-align: center;
 }
 
 .event-box.expanded .event-details .event-location {
   display: flex;
   align-items: center;
-  font-size: 2vh;
+  font-size: 3vh;
   justify-content: center;
   flex-direction: column;
 }
 
 .location-link {
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .location-link:hover {
-  text-decoration: none;
-  color: blue;
+  text-decoration: underline;
+  color: #fff;
 } 
 
 .cards{

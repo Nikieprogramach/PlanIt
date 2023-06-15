@@ -1,12 +1,13 @@
 .create-event{
-    background-image: url('../../../public/images/CreateEvent.jpg');
+    background-image: url('../../../public/images/CreateEvent1.jpg');
     display: flex;
-    height: 94vh;
+    height: 95vh;
     align-items: center;
     justify-content: center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .page{
@@ -37,7 +38,7 @@ input[type="url"] {
 .create-button{
     background-color: transparent;
     height: 5vh;
-    width: 8vw;
+    width: 10vw;
     font-size: 18px;
     color: #fff;
     background-color: transparent;

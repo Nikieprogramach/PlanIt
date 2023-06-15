@@ -48,7 +48,7 @@ function NavBar()
             const sessionId = localStorage.getItem('sessionId');
             console.log("session id from browser", sessionId)
   
-            window.location.href = '/';
+            window.location.href = '/home';
             // Do something with the received JSON data
           })
           .catch(error => {
@@ -63,7 +63,7 @@ function NavBar()
     return (
         <nav className = 'navbar'>
             <div className = "navbar-container">
-                <Link to = "/" className='navbar-logo' onClick={closeMobileMenu}>
+                <Link to = "/home" className='navbar-logo' onClick={closeMobileMenu}>
                     PlanIt
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
@@ -71,7 +71,7 @@ function NavBar()
                 </div>
                 <ul className={click ? 'nav-menu.active' : 'nav-menu'}>
                     <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                        <Link to='/home' className='nav-links' onClick={closeMobileMenu}>
                             Home
                         </Link>
                     </li>
@@ -80,11 +80,11 @@ function NavBar()
                             Events
                         </Link>
                     </li>
-                    <li className='nav-item'>
+                    {/* <li className='nav-item'>
                         <Link to='/photos' className='nav-links' onClick={closeMobileMenu}>
                             Photos
                         </Link>
-                    </li>
+                    </li> */}
                     {localStorage.getItem('sessionId') != null ? 
                     <li className='nav-item sign-up-button'>
                         <Link to='/sign-out' className='sign-out-btn' onClick={handleSignOut}>

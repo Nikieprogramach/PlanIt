@@ -5,7 +5,7 @@ function CreateEvent(){
 
     useEffect(() => {
         if(localStorage.getItem('sessionId') == null){
-            // window.location.href = '/login';
+             window.location.href = '/login';
         }
       }, []);
 
@@ -15,6 +15,12 @@ function CreateEvent(){
     const [date, setDate] = useState('');
     const [imageURL, setImageURL] = useState('');
     const [emails, setEmails] = useState([])
+    const [isPublic, setIsPublic] = useState(true)
+
+    
+    const handleCheckboxChange = () => {
+        setIsPublic(!isPublic);
+    };
 
     const createEvent = async (event) => {
         event.preventDefault();
@@ -30,12 +36,12 @@ function CreateEvent(){
             headers: {
                 'Content-Type': 'application/json',
               },
-            body: JSON.stringify({ session_id, name, location, description, date, imageURL, emails }),
+            body: JSON.stringify({ session_id, name, location, description, date, imageURL, emails, isPublic }),
         }).then(response => response.json())
             .then(data => {
             console.log(data.seccess);
             if(data.seccess === 'ok'){
-                window.location.href = '/';
+                window.location.href = '/home';
             }
         })
         .catch(error => {
@@ -74,7 +80,11 @@ function CreateEvent(){
                         </div>
                         <div class="form-group">
                             <label for="image">People Invited:</label>
-                            <input type="email" id="email" value={emails} onChange={(event) => setEmails(event.target.value)} multiple required />
+                            <input type="email" id="email" value={emails} onChange={(event) => setEmails(event.target.value)} multiple />
+                        </div>
+                        <div class="form-group">
+                            <label for="is-public">Is public:</label>
+                            <input type="checkbox" id="checkbox" value={isPublic} onChange={(event) => handleCheckboxChange()} multiple />
                         </div>
                              <button type="submit" className="create-button">Create event</button>
                         </form>

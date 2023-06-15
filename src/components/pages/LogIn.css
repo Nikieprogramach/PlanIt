@@ -15,7 +15,7 @@
     height: 94vh;
     align-items: center;
     justify-content: center;
-    background-image: url('../../../public/images/signUpBackground.png');
+    background-image: url('../../../public/images/signUpBackground1.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -78,8 +78,4 @@
     float:right;
     display: flex;
     flex-direction: column;
-  }
-
-  .signup-link{
-    
   }

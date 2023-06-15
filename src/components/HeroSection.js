@@ -9,9 +9,15 @@ function HeroSection(){
             <h1>Adventure awaits</h1>
             <p>What are you waiting for</p>
             <div className="hero-btns">
-                <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' path='/sign-up'>
-                    Get started
-                </Button>
+                {localStorage.getItem('sessionId') == null ? 
+                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' path='/sign-up'>
+                        Get started
+                    </Button>
+                :
+                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' path='/events'>
+                        Events
+                    </Button>
+                }
                 <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large' path='/create-event'>
                     Create an event <i className='far-fa-play-circle'/>
                 </Button>

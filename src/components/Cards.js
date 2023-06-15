@@ -16,7 +16,9 @@ function Cards(){
   
         const session_id = localStorage.getItem('sessionId');
 
-        console.log(session_id)
+        const pathname = window.location.pathname
+
+        console.log(pathname)
 
         try {
           const response = await fetch('http://localhost:3001/load-events', {
@@ -24,7 +26,7 @@ function Cards(){
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({session_id }),
+            body: JSON.stringify({session_id, pathname }),
           }).then(response => response.json())
           .then(data => {
           console.log(data);
@@ -47,9 +49,10 @@ function Cards(){
                         location = {item.location}
                         link = 'https://www.google.com/'
                         photo = {item.image}
+                        is_public = {item.is_public}
                         />
                     ))}
-                    <Card 
+                    {/* <Card 
                     photo="images/Fire_Lizard.jpg"
                     description = "See the fire lizard! lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
                     name = 'Fire Lizard'
@@ -64,7 +67,7 @@ function Cards(){
                     date = '23ti Avgust'
                     location = 'ul. Vasil Petleshkov 21'
                     link = 'https://www.google.com/'
-                    />
+                    /> */}
                 </div>
             </div>
         </div>

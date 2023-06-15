@@ -53,7 +53,7 @@ export default function SignUp(){
                     <label for="password">Password:</label>
                     <input type="password" id="password" placeholder="Enter your password" value={password} onChange={(event) => setPassword(event.target.value)} required/>
                 </div>
-                <button className="submit" type="submit">Submit</button>
+                <button className="submit" type="submit">Sign up</button>
                 <div className="login">
                   <p>Already have an account? </p>
                   <Link to="/login">Log In</Link>

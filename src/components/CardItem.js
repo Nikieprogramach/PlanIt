@@ -28,14 +28,20 @@ function Card(props) {
                         {expanded && (
                             <div className="event-details" >
                                 <h2 className="event-name">{props.name}</h2>
+                                {props.is_public == 1 ? 
+                                    <h3>Event is public.</h3>
+                                :
+                                    <h3>Event is private.</h3>
+                                }
                                 <p className="event-description">{props.description}</p>
                                 <div className="event-date-time">
                                     <div className="label">When?  </div> 
-                                    <div className='date'> {props.date}</div>
+                                    {/* <div className='date'> {props.date.split('T')[0].split('-')}</div> */}
+                                    <div className='date'> {`${props.date.split('T')[0].split('-')[2]}-${props.date.split('T')[0].split('-')[1]}-${props.date.split('T')[0].split('-')[0]}`}</div>
                                 </div>
                                 <div className="event-location">
                                     <span className="label">Where? <br></br></span> 
-                                    <a className="location-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(props.location)}`}>{props.location}</a>
+                                    <a className="location-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(props.location)}`} target='_blank'>{props.location}</a>
                                 </div>
                             </div> 
                         )

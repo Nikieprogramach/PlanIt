@@ -9,8 +9,14 @@ function Home(){
     return(
         <>
             <HeroSection/>
-            <h2>Check out interesting events!</h2>
+            {localStorage.getItem('sessionId') != null ? 
+            <>
+            <h2>Check out interesting public events!</h2>
             <Cards/>
+            </>
+            :
+                <></>
+            }
             <Footer/>
         </>
     )

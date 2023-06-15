@@ -21,9 +21,13 @@
 }
 
 .info-links{
+    align-items: center;
+    text-align: center;
     text-decoration: none;
+    width: 150px;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 10px;
     color: #fff;    
     border:1px solid #fff;
@@ -38,4 +42,8 @@
 .footer-link-items{
     display:flex;
     justify-content: space-between;
+}
+
+.about-us{
+    text-align: center;
 }

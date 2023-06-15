@@ -8,11 +8,31 @@
     justify-content: center;
 }
 
+.page{
+    position: relative;
+    height: 91.7vh;
+    width: 98vw;
+}
+
 .event-list-container{
-    width: 100vw;
+    position: absolute;
+    width: 98vw;
     height: 50vh;
     border-radius: 5px;
     background-color: rgba(36, 36, 36, 0.9);
     z-index: 2;
     font-size: 15px;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.create-event-button{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 70px;
+    float: right;
+    /* padding-right: 10px;
+    padding-bottom: 10px; */
 }
